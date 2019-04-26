@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- on va utiliser les annotations -->
+<context:annotation-config/>
+<!-- donner le chemin ou se trouvent les classes annotées -->
+<context:component-scan base-package="com.infotel.TpMavenSpring26AVRIL"/>
+
+
+	<!-- injection de dev dans devlogiciel -->
+	<bean id="devlog" class="com.infotel.TpMavenSpring.metier.DevLogiciel"> <!-- definir onjet class -->
+	 <property name ="developpeur" ref="dev1"/>
+	 </bean>
+	 
+	 <bean id="dev1" class="com.infotel.TpMavenSpring.metier.Dev"><!-- bean cest objet ici cest objet personne -->
+	 <property name ="id" value="1"/>
+	 <property name ="nom" value="achraf"/>
+	 <property name ="experience" value="18"/>
+	 </bean>
+	 
+</beans>
