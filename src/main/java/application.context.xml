@@ -12,11 +12,11 @@
 
 
 	<!-- injection de dev dans devlogiciel -->
-	<bean id="devlog" class="com.infotel.TpMavenSpring.metier.DevLogiciel"> <!-- definir onjet class -->
+	<bean id="devlog" class="com.infotel.TpMavenSpring26AVRIL.metier.DevLogiciel"> <!-- definir onjet class -->
 	 <property name ="developpeur" ref="dev1"/>
 	 </bean>
 	 
-	 <bean id="dev1" class="com.infotel.TpMavenSpring.metier.Dev"><!-- bean cest objet ici cest objet personne -->
+	 <bean id="dev1" class="com.infotel.TpMavenSpring26AVRIL.metier.Dev"><!-- bean cest objet ici cest objet personne -->
 	 <property name ="id" value="1"/>
 	 <property name ="nom" value="achraf"/>
 	 <property name ="experience" value="18"/>
